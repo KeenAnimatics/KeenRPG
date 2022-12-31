@@ -15,5 +15,5 @@ import net.keen.krpg.KrpgMod;
 
 public class KrpgModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, KrpgMod.MODID);
-	public static final RegistryObject<Block> REINFORCED_BARREL = REGISTRY.register("reinforced_barrel", () -> new ReinforcedBarrelBlock());
+	public static final RegistryObject<Block> STONE_INFORCED_BARREL = REGISTRY.register("stone_inforced_barrel", () -> new ReinforcedBarrelBlock());
 }

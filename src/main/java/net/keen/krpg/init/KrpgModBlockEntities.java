@@ -16,8 +16,8 @@ import net.keen.krpg.KrpgMod;
 
 public class KrpgModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, KrpgMod.MODID);
-	public static final RegistryObject<BlockEntityType<?>> REINFORCED_BARREL = register("reinforced_barrel", KrpgModBlocks.REINFORCED_BARREL,
-			ReinforcedBarrelBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> STONE_INFORCED_BARREL = register("stone_inforced_barrel",
+			KrpgModBlocks.STONE_INFORCED_BARREL, ReinforcedBarrelBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
 			BlockEntityType.BlockEntitySupplier<?> supplier) {

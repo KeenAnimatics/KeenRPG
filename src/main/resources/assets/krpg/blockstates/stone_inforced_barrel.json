@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "krpg:block/stone_inforced_barrel",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "krpg:block/stone_inforced_barrel"
+    },
+    "axis=z": {
+      "model": "krpg:block/stone_inforced_barrel",
+      "x": 90
+    }
+  }
+}

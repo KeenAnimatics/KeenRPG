@@ -1,5 +1,5 @@
 {
-  "parent": "krpg:block/reinforced_barrel",
+  "parent": "krpg:block/stone_inforced_barrel",
   "display": {
     "thirdperson": {
       "rotation": [

@@ -17,7 +17,7 @@ import net.keen.krpg.KrpgMod;
 
 public class KrpgModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, KrpgMod.MODID);
-	public static final RegistryObject<Item> REINFORCED_BARREL = block(KrpgModBlocks.REINFORCED_BARREL, KrpgModTabs.TAB_KEEN_RPG);
+	public static final RegistryObject<Item> STONE_INFORCED_BARREL = block(KrpgModBlocks.STONE_INFORCED_BARREL, KrpgModTabs.TAB_KEEN_RPG);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

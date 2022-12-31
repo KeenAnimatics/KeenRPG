@@ -33,7 +33,7 @@ public class ReinforcedBarrelBlockEntity extends RandomizableContainerBlockEntit
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public ReinforcedBarrelBlockEntity(BlockPos position, BlockState state) {
-		super(KrpgModBlockEntities.REINFORCED_BARREL.get(), position, state);
+		super(KrpgModBlockEntities.STONE_INFORCED_BARREL.get(), position, state);
 	}
 
 	@Override
@@ -77,7 +77,7 @@ public class ReinforcedBarrelBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public Component getDefaultName() {
-		return new TextComponent("reinforced_barrel");
+		return new TextComponent("stone_inforced_barrel");
 	}
 
 	@Override
@@ -92,7 +92,7 @@ public class ReinforcedBarrelBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public Component getDisplayName() {
-		return new TextComponent("Stone Inforced Barrel");
+		return new TextComponent("Stone-Inforced Barrel");
 	}
 
 	@Override
