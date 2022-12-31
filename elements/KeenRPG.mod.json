@@ -1,0 +1,11 @@
+{
+  "_fv": 33,
+  "_type": "tab",
+  "definition": {
+    "name": "Keen RPG",
+    "icon": {
+      "value": "Blocks.REDSTONE_BLOCK"
+    },
+    "showSearch": true
+  }
+}

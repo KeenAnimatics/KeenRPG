@@ -1,0 +1,41 @@
+{
+  "mod_elements": [
+    {
+      "name": "KeenRPG",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keen_rpg"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "itemGroup.tabkeen_rpg": "Keen RPG"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "krpg",
+    "modName": "KeenRPG",
+    "version": "1.0.0",
+    "author": "Reckl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "modElementsPackage": "net.keen.krpg",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200234517
+}
