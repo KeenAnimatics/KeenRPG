@@ -7,12 +7,21 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "keen_rpg"
+    },
+    {
+      "name": "ReinforcedBarrel",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforced_barrel"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.krpg.reinforced_barrel": "Stone Inforced Barrel",
       "itemGroup.tabkeen_rpg": "Keen RPG"
     }
   },

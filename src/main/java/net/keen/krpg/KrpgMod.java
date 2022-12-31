@@ -27,6 +27,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.keen.krpg.init.KrpgModTabs;
+import net.keen.krpg.init.KrpgModItems;
+import net.keen.krpg.init.KrpgModBlocks;
+import net.keen.krpg.init.KrpgModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -44,6 +47,10 @@ public class KrpgMod {
 	public KrpgMod() {
 		KrpgModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		KrpgModBlocks.REGISTRY.register(bus);
+		KrpgModItems.REGISTRY.register(bus);
+
+		KrpgModBlockEntities.REGISTRY.register(bus);
 
 	}
 
