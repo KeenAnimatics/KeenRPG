@@ -1,14 +1,25 @@
 {
   "variants": {
-    "axis=x": {
-      "model": "krpg:block/stone_inforced_barrel",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y": {
+    "facing=north": {
       "model": "krpg:block/stone_inforced_barrel"
     },
-    "axis=z": {
+    "facing=east": {
+      "model": "krpg:block/stone_inforced_barrel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "krpg:block/stone_inforced_barrel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "krpg:block/stone_inforced_barrel",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "krpg:block/stone_inforced_barrel",
+      "x": 270
+    },
+    "facing=down": {
       "model": "krpg:block/stone_inforced_barrel",
       "x": 90
     }

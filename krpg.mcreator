@@ -14,7 +14,8 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stone_inforced_barrel"
+      "registry_name": "stone_inforced_barrel",
+      "path": "~/InforcedBarrels/InforcedBarrel1"
     }
   ],
   "variable_elements": [],
@@ -27,7 +28,17 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "InforcedBarrels",
+        "children": [
+          {
+            "name": "InforcedBarrel1",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "krpg",

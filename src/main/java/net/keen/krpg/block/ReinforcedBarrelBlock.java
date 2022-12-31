@@ -3,15 +3,16 @@ package net.keen.krpg.block;
 
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
@@ -32,11 +33,11 @@ public class ReinforcedBarrelBlock extends Block
 		implements
 
 			EntityBlock {
-	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public ReinforcedBarrelBlock() {
 		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 10f));
-		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
 	@Override
@@ -46,24 +47,20 @@ public class ReinforcedBarrelBlock extends Block
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(AXIS);
+		builder.add(FACING);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState().setValue(AXIS, context.getClickedFace().getAxis());
+		return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
 	}
 
-	@Override
 	public BlockState rotate(BlockState state, Rotation rot) {
-		if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
-			if (state.getValue(AXIS) == Direction.Axis.X) {
-				return state.setValue(AXIS, Direction.Axis.Z);
-			} else if (state.getValue(AXIS) == Direction.Axis.Z) {
-				return state.setValue(AXIS, Direction.Axis.X);
-			}
-		}
-		return state;
+		return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+	}
+
+	public BlockState mirror(BlockState state, Mirror mirrorIn) {
+		return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
 	}
 
 	@Override
